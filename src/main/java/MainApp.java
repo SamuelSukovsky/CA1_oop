@@ -54,12 +54,39 @@ public class MainApp
         {
             System.out.println(a.toString());
         }
+
+
+        for (Activity a : sortByDuration(list))
+        {
+            System.out.println(a.toString());
+        }
+
+
     }
 
     public static ArrayList<Activity> sortByCalories (ArrayList<Activity> list)
     {
         ActivityCaloriesComparator comp = new ActivityCaloriesComparator();
         Collections.sort(list, comp);
+        Collections.reverse(list);
+        return list;
+    }
+
+    public static ArrayList<Activity> sortByDuration (ArrayList<Activity> list)
+    {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("1 - ascending order \n2 - descending order");
+        int input = keyboard.nextInt();
+        ActivityDurationComparator comp = new ActivityDurationComparator();
+        if(input == 1)
+        {
+            Collections.sort(list, comp);
+        }
+        else if(input == 2)
+        {
+            Collections.sort(list, comp);
+            Collections.reverse(list);
+        }
         return list;
     }
 }

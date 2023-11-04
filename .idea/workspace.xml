@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6bbd689d-c3c9-465d-b4dd-8fcd600efcf7" name="Changes" comment="added test class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Activity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TestApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,20 +22,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;SamuelSukovsky&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="7fac142e-73b7-48f6-b702-c73aaa6e15e6" />
-        <option name="url" value="https://github.com/SamuelSukovsky/CA1_oop" />
-      </UrlAndAccount>
-    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -115,30 +99,6 @@
       <option name="project" value="LOCAL" />
       <updated>1699125519790</updated>
     </task>
-    <task id="LOCAL-00004" summary="Data folder">
-      <option name="closed" value="true" />
-      <created>1699124020521</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1699124020522</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Read activities from file">
-      <option name="closed" value="true" />
-      <created>1699124461381</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1699124461381</updated>
-    </task>
-    <task id="LOCAL-00006" summary="cleanup">
-      <option name="closed" value="true" />
-      <created>1699125019496</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1699125019496</updated>
-    </task>
     <option name="localTasksCounter" value="4" />
     <servers />
   </component>
@@ -160,11 +120,7 @@
     <MESSAGE value="added activity class" />
     <MESSAGE value="added calories comparator" />
     <MESSAGE value="added test class" />
-    <MESSAGE value="File selection" />
-    <MESSAGE value="Data folder" />
-    <MESSAGE value="Read activities from file" />
-    <MESSAGE value="cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="added test class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -173,11 +129,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
           <line>15</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Activity.java</url>
-          <line>63</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
