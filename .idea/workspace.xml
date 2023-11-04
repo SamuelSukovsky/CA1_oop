@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bbd689d-c3c9-465d-b4dd-8fcd600efcf7" name="Changes" comment="added activity class">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ActivityCaloriesComparator.java" afterDir="false" />
+    <list default="true" id="6bbd689d-c3c9-465d-b4dd-8fcd600efcf7" name="Changes" comment="added calories comparator">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ActivityDateComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ActivityDistanceComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ActivityDurationComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ActivityTypeComparator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Activity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +62,7 @@
       <updated>1699117474272</updated>
       <workItem from="1699117475340" duration="2000" />
       <workItem from="1699120138295" duration="30000" />
-      <workItem from="1699120169016" duration="1641000" />
+      <workItem from="1699120169016" duration="2409000" />
     </task>
     <task id="LOCAL-00001" summary="added activity class">
       <option name="closed" value="true" />
@@ -70,7 +72,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699120023310</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added calories comparator">
+      <option name="closed" value="true" />
+      <created>1699121982572</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699121982572</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -89,7 +99,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added activity class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added activity class" />
+    <MESSAGE value="added calories comparator" />
+    <option name="LAST_COMMIT_MESSAGE" value="added calories comparator" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
