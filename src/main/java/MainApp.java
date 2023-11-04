@@ -92,8 +92,15 @@ public class MainApp
 
     public static ArrayList<Activity> sortByDate (ArrayList<Activity> list)
     {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("1 - ascending order \n2 - descending order");
+        int input = keyboard.nextInt();
         ActivityDateComparator comp = new ActivityDateComparator();
         Collections.sort(list, comp);
+        if(input == 2)
+        {
+            Collections.reverse(list);
+        }
         return list;
     }
 }
