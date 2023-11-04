@@ -50,7 +50,7 @@ public class MainApp
         }
         System.out.println("");
 
-        for (Activity a : sortByCalories(list))
+        for (Activity a : sortByDate(list))
         {
             System.out.println(a.toString());
         }
@@ -59,6 +59,13 @@ public class MainApp
     public static ArrayList<Activity> sortByCalories (ArrayList<Activity> list)
     {
         ActivityCaloriesComparator comp = new ActivityCaloriesComparator();
+        Collections.sort(list, comp);
+        return list;
+    }
+
+    public static ArrayList<Activity> sortByDate (ArrayList<Activity> list)
+    {
+        ActivityDateComparator comp = new ActivityDateComparator();
         Collections.sort(list, comp);
         return list;
     }
