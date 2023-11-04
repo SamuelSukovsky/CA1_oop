@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bbd689d-c3c9-465d-b4dd-8fcd600efcf7" name="Changes" comment="Data folder">
     <list default="true" id="6bbd689d-c3c9-465d-b4dd-8fcd600efcf7" name="Changes" comment="added test class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Activity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TestApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TestApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,12 +25,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "SamuelSukovsky"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;SamuelSukovsky&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -108,13 +107,13 @@
       <option name="project" value="LOCAL" />
       <updated>1699121982572</updated>
     </task>
-    <task id="LOCAL-00003" summary="File selection">
+    <task id="LOCAL-00003" summary="added test class">
       <option name="closed" value="true" />
-      <created>1699123870970</created>
+      <created>1699125519790</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1699123870970</updated>
+      <updated>1699125519790</updated>
     </task>
     <task id="LOCAL-00004" summary="Data folder">
       <option name="closed" value="true" />
@@ -124,14 +123,21 @@
       <option name="project" value="LOCAL" />
       <updated>1699124020522</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
-    <task id="LOCAL-00003" summary="added test class">
+    <task id="LOCAL-00005" summary="Read activities from file">
       <option name="closed" value="true" />
-      <created>1699125519790</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
+      <created>1699124461381</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1699125519790</updated>
+      <updated>1699124461381</updated>
+    </task>
+    <task id="LOCAL-00006" summary="cleanup">
+      <option name="closed" value="true" />
+      <created>1699125019496</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699125019496</updated>
     </task>
     <option name="localTasksCounter" value="4" />
     <servers />
@@ -154,10 +160,11 @@
     <MESSAGE value="added activity class" />
     <MESSAGE value="added calories comparator" />
     <MESSAGE value="added test class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added test class" />
     <MESSAGE value="File selection" />
     <MESSAGE value="Data folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Data folder" />
+    <MESSAGE value="Read activities from file" />
+    <MESSAGE value="cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

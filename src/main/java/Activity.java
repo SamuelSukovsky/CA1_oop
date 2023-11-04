@@ -96,6 +96,7 @@ public class Activity
                 ", duration=" + duration +
                 ", distance=" + distance +
                 ", heartRate=" + heartRate +
+                ", calories=" + CalculateCalories() +
                 '}';
     }
 }
