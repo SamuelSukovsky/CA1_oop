@@ -35,7 +35,7 @@ public class MainApp
 
         if(file.hasNextLine())
             file.nextLine();
-        while (file.hasNextLine)
+        while (file.hasNextLine())
         {
             String line = file.nextLine();
 
