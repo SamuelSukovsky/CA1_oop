@@ -87,4 +87,15 @@ public class Activity
     }
 
 
+    @Override
+    public String toString()
+    {
+        return "Activity{" +
+                "type='" + type + '\'' +
+                ", date='" + date + '\'' +
+                ", duration=" + duration +
+                ", distance=" + distance +
+                ", heartRate=" + heartRate +
+                '}';
+    }
 }

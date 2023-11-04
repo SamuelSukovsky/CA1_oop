@@ -13,5 +13,18 @@ public class TestApp
         activities.add((act2));
         activities.add((act3));
 
+        int i = 0;
+        double avgDistance = 0;
+        double avgCalories = 0;
+        for(Activity activity : activities)
+        {
+            avgDistance = avgDistance + activity.getDistance();
+            avgCalories = avgCalories + activity.CalculateCalories();
+            i++;
+        }
+        avgDistance/=i;
+        avgCalories/=i;
+        System.out.println(avgDistance);
+        System.out.println(avgCalories);
     }
 }
