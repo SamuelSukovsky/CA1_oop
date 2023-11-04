@@ -40,7 +40,7 @@ public class MainApp
             String line = file.nextLine();
             String [] tokens = line.split(",");
 
-            list.add(new Activity(tokens[0], Double.parseDouble(tokens[1]), tokens[2], Double.parseDouble(tokens[3]), Integer.parseInt(tokens[4])));
+            list.add(new Activity(tokens[0], tokens[1], Double.parseDouble(tokens[2]), Double.parseDouble(tokens[3]), Integer.parseInt(tokens[4])));
         }
 
         for(Activity a : list)

@@ -1,35 +1,35 @@
 public class Activity
 {
     private String type;
-    private double duration;
     private String date;
+    private double duration;
     private double distance;
     private int heartRate;
 
     public Activity()
     {
         this.type = "";
-        this.duration = 0;
         this.date = "";
+        this.duration = 0;
         this.distance = 0;
         this.heartRate = 0;
     }
 
-    public Activity(String type,double duration,String date, double distance,int heartRate)
+    public Activity(String type, String date, double duration, double distance,int heartRate)
     {
         this.type = type;
-        this.duration = duration;
         this.date = date;
+        this.duration = duration;
         this.distance = distance;
         this.heartRate = heartRate;
     }
 
     //Getters
-    String getType() {return this.type;}
-    double getDuration() {return this.duration;}
-    double getDistance() {return this.distance;}
-    String getDate() {return  this.date;}
-    int getHeartRate() {return this.heartRate;}
+    public String getType() {return this.type;}
+    public double getDuration() {return this.duration;}
+    public double getDistance() {return this.distance;}
+    public String getDate() {return  this.date;}
+    public int getHeartRate() {return this.heartRate;}
 
     //Setters
     void setType(String type){this.type = type;}
@@ -39,7 +39,7 @@ public class Activity
     void setHeartRate(int heartRate){this.heartRate = heartRate;}
 
     //Methods
-    public double EnergyExpanded()
+    public double EnergyExpended()
     {
         double duration = getDuration();
         double distance = getDistance();
@@ -52,7 +52,7 @@ public class Activity
         double duration = getDuration();
         double distance = getDistance();
         String type = getType();
-        double energy = EnergyExpanded();
+        double energy = EnergyExpended();
         double calories;
         double intensity = 0;
         switch (type)
@@ -85,4 +85,6 @@ public class Activity
         calories = intensity * duration;
         return calories;
     }
+
+
 }
