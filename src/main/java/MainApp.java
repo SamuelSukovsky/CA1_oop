@@ -44,29 +44,21 @@ public class MainApp
             list.add(new Activity(tokens[0], tokens[1], Double.parseDouble(tokens[2]), Double.parseDouble(tokens[3]), Integer.parseInt(tokens[4])));
         }
 
+        PrintList(list);
+        PrintList(sortByCalories(list));
+        PrintList(sortByDuration(list));
+        PrintList(sortByDate(list));
+        PrintList(sortByType(list));
+        PrintList(sortByDistance(list));
+    }
+
+    public static void PrintList (ArrayList<Activity> list)
+    {
         for (Activity a : list)
         {
             System.out.println(a.toString());
         }
         System.out.println("");
-
-        for (Activity a : sortByDate(list))
-        {
-            System.out.println(a.toString());
-        }
-
-
-        for (Activity a : sortByDuration(list))
-        {
-            System.out.println(a.toString());
-        }
-
-        for (Activity a : sortByDistance(list))
-        {
-            System.out.println(a.toString());
-        }
-
-
     }
 
     public static ArrayList<Activity> sortByCalories (ArrayList<Activity> list)
@@ -102,6 +94,13 @@ public class MainApp
         {
             Collections.reverse(list);
         }
+        return list;
+    }
+
+    public static ArrayList<Activity> sortByType (ArrayList<Activity> list)
+    {
+        ActivityTypeComparator comp = new ActivityTypeComparator();
+        Collections.sort(list, comp);
         return list;
     }
 
