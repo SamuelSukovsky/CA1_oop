@@ -61,6 +61,11 @@ public class MainApp
             System.out.println(a.toString());
         }
 
+        for (Activity a : sortByDistance(list))
+        {
+            System.out.println(a.toString());
+        }
+
 
     }
 
@@ -78,13 +83,9 @@ public class MainApp
         System.out.println("1 - ascending order \n2 - descending order");
         int input = keyboard.nextInt();
         ActivityDurationComparator comp = new ActivityDurationComparator();
-        if(input == 1)
+        Collections.sort(list, comp);
+        if(input == 2)
         {
-            Collections.sort(list, comp);
-        }
-        else if(input == 2)
-        {
-            Collections.sort(list, comp);
             Collections.reverse(list);
         }
         return list;
@@ -96,6 +97,20 @@ public class MainApp
         System.out.println("1 - ascending order \n2 - descending order");
         int input = keyboard.nextInt();
         ActivityDateComparator comp = new ActivityDateComparator();
+        Collections.sort(list, comp);
+        if(input == 2)
+        {
+            Collections.reverse(list);
+        }
+        return list;
+    }
+
+    public static ArrayList<Activity> sortByDistance (ArrayList<Activity> list)
+    {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("1 - ascending order \n2 - descending order");
+        int input = keyboard.nextInt();
+        ActivityDistanceComparator comp = new ActivityDistanceComparator();
         Collections.sort(list, comp);
         if(input == 2)
         {
