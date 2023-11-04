@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6bbd689d-c3c9-465d-b4dd-8fcd600efcf7" name="Changes" comment="Sort by calories">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ActivityDateComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ActivityDateComparator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +123,6 @@
       <option name="project" value="LOCAL" />
       <updated>1699125019496</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
     <option name="localTasksCounter" value="4" />
     <servers />
   </component>
@@ -151,7 +149,6 @@
     <MESSAGE value="Read activities from file" />
     <MESSAGE value="cleanup" />
     <MESSAGE value="Sort by calories" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sort by calories" />
     <option name="LAST_COMMIT_MESSAGE" value="added test class" />
   </component>
   <component name="XDebuggerManager">
