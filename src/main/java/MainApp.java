@@ -62,9 +62,12 @@ public class MainApp
             System.out.print("Enter a number: ");
             input = keyboard.nextInt();
 
-            while (input > 0) {
-                switch (input) {
-                    case 1 -> {
+            while (input > 0)
+            {
+                switch (input)
+                {
+                    case 1 ->
+                    {
                         System.out.println("Sorting Menu:");
                         System.out.println("1 - sort by calories (descending)");
                         System.out.println("2 - sort by date");
@@ -75,25 +78,34 @@ public class MainApp
                         System.out.println();
                         System.out.print("Enter a number: ");
                         num = keyboard.nextInt();
-                        switch (num) {
-                            case 1 -> {
-                                PrintList(sortByCalories(list));
-                            }
-                            case 2 -> {
-                                PrintList(sortByDate(list));
-                            }
-                            case 3 -> {
-                                PrintList(sortByDuration(list));
-                            }
-                            case 4 -> {
-                                PrintList(sortByType(list));
-                            }
-                            case 5 -> {
-                                PrintList(sortByDistance(list));
-                            }
-                            case 6 -> {
-                                input = 0;
-                            }
+                        switch (num)
+                        {
+                            case 1 -> {PrintList(sortByCalories(list));}
+                            case 2 -> {PrintList(sortByDate(list));}
+                            case 3 -> {PrintList(sortByDuration(list));}
+                            case 4 -> {PrintList(sortByType(list));}
+                            case 5 -> {PrintList(sortByDistance(list));}
+                            case 6 -> {input = 0;}
+                        }
+                    }
+                    case 2 ->
+                    {
+                        System.out.println("View Menu:");
+                        System.out.println("1 - view by activity type");
+                        System.out.println("2 - view above minimum distance");
+                        System.out.println("3 - view type of energy expended");
+                        System.out.println("4 - view above minimum duration");
+                        System.out.println("5 - go back");
+                        System.out.println();
+                        System.out.print("Enter a number: ");
+                        num = keyboard.nextInt();
+                        switch (num)
+                        {
+                            case 1 -> {PrintList(sortByCalories(list));}
+                            case 2 -> {PrintList(sortByDate(list));}
+                            case 3 -> {PrintList(sortByDuration(list));}
+                            case 4 -> {PrintList(sortByType(list));}
+                            case 5`  -> {input = 0;}
                         }
                     }
                 }
@@ -106,7 +118,6 @@ public class MainApp
         //PrintList(sortByDate(list));
         //PrintList(sortByType(list));
         //PrintList(sortByDistance(list));
-
 
 
     }
