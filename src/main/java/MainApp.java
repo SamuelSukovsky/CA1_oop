@@ -105,8 +105,20 @@ public class MainApp
                             case 2 -> {PrintList(sortByDate(list));}
                             case 3 -> {PrintList(sortByDuration(list));}
                             case 4 -> {PrintList(sortByType(list));}
-                            case 5`  -> {input = 0;}
+                            case 5  -> {input = 0;}
                         }
+                    }
+                    case 3 ->
+                    {
+                        System.out.println("Find By:");
+                    }
+                    case 4 ->
+                    {
+                        System.out.println("View statistics:");
+                    }
+                    case 5 ->
+                    {
+                        input = -1;
                     }
                 }
 
