@@ -16,6 +16,11 @@ public class MainApp
             System.out.println(fileEntry.getName());
         }
 
+        System.out.println();
+        System.out.println("Activity tracker:");
+        System.out.print("Input the name of the file to upload the activities from: ");
+
+
         boolean noFile = true;
         Scanner file = null;
 
@@ -43,13 +48,67 @@ public class MainApp
 
             list.add(new Activity(tokens[0], tokens[1], Double.parseDouble(tokens[2]), Double.parseDouble(tokens[3]), Integer.parseInt(tokens[4])));
         }
+        int input = 0, num;
+        while(input == 0)
+        {
+            System.out.println();
+            System.out.println("Main Menu:");
+            System.out.println("1 - sorting options");
+            System.out.println("2 - view activities by...");
+            System.out.println("3 - finding options");
+            System.out.println("4 - view statistics");
+            System.out.println("5 - quit");
+            System.out.println();
+            System.out.print("Enter a number: ");
+            input = keyboard.nextInt();
 
-        PrintList(list);
-        PrintList(sortByCalories(list));
-        PrintList(sortByDuration(list));
-        PrintList(sortByDate(list));
-        PrintList(sortByType(list));
-        PrintList(sortByDistance(list));
+            while (input > 0) {
+                switch (input) {
+                    case 1 -> {
+                        System.out.println("Sorting Menu:");
+                        System.out.println("1 - sort by calories (descending)");
+                        System.out.println("2 - sort by date");
+                        System.out.println("3 - sort by activity duration");
+                        System.out.println("4 - sort by type of activity");
+                        System.out.println("5 - sort by distance");
+                        System.out.println("6 - go back");
+                        System.out.println();
+                        System.out.print("Enter a number: ");
+                        num = keyboard.nextInt();
+                        switch (num) {
+                            case 1 -> {
+                                PrintList(sortByCalories(list));
+                            }
+                            case 2 -> {
+                                PrintList(sortByDate(list));
+                            }
+                            case 3 -> {
+                                PrintList(sortByDuration(list));
+                            }
+                            case 4 -> {
+                                PrintList(sortByType(list));
+                            }
+                            case 5 -> {
+                                PrintList(sortByDistance(list));
+                            }
+                            case 6 -> {
+                                input = 0;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+        //PrintList(list);
+        //PrintList(sortByCalories(list));
+        //PrintList(sortByDuration(list));
+        //PrintList(sortByDate(list));
+        //PrintList(sortByType(list));
+        //PrintList(sortByDistance(list));
+
+
+
     }
 
     public static void PrintList (ArrayList<Activity> list)

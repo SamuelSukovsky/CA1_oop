@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bbd689d-c3c9-465d-b4dd-8fcd600efcf7" name="Changes" comment="Sort by date asc/desc">
+    <list default="true" id="6bbd689d-c3c9-465d-b4dd-8fcd600efcf7" name="Changes" comment="sort by distance">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp.java" afterDir="false" />
     </list>
@@ -74,6 +74,7 @@
       <workItem from="1699117475340" duration="2000" />
       <workItem from="1699120138295" duration="30000" />
       <workItem from="1699120169016" duration="2409000" />
+      <workItem from="1699280081490" duration="2224000" />
     </task>
     <task id="LOCAL-00001" summary="added activity class">
       <option name="closed" value="true" />
@@ -99,13 +100,13 @@
       <option name="project" value="LOCAL" />
       <updated>1699125519790</updated>
     </task>
-    <task id="LOCAL-00004" summary="Sort by date asc/desc">
+    <task id="LOCAL-00004" summary="Sort by calories">
       <option name="closed" value="true" />
-      <created>1699128947220</created>
+      <created>1699127739256</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1699128947220</updated>
+      <updated>1699127739256</updated>
     </task>
     <task id="LOCAL-00005" summary="Read activities from file">
       <option name="closed" value="true" />
@@ -123,7 +124,7 @@
       <option name="project" value="LOCAL" />
       <updated>1699125019496</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,8 +150,7 @@
     <MESSAGE value="Read activities from file" />
     <MESSAGE value="cleanup" />
     <MESSAGE value="Sort by calories" />
-    <MESSAGE value="Sort by date asc/desc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sort by date asc/desc" />
+    <option name="LAST_COMMIT_MESSAGE" value="added test class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
