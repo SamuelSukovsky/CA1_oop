@@ -8,12 +8,12 @@ public class MainApp
 {
     public static void main(String[] args)
     {
-        Scanner keyboard = new Scanner(System.in); //creating a new scanner for all inputs
-        ArrayList<Activity> list = new ArrayList<>(); //the list of activity objects that stores all activities from the file
+        Scanner keyboard = new Scanner(System.in);
+        ArrayList<Activity> list = new ArrayList<>();
 
-        for (final File fileEntry : new File("Data").listFiles()) //loop that goes through all the files in the folder
+        for (final File fileEntry : new File("Data").listFiles())
         {
-            System.out.println(fileEntry.getName()); //displays all files
+            System.out.println(fileEntry.getName());
         }
 
         System.out.println();
@@ -26,7 +26,7 @@ public class MainApp
 
         while (noFile)
         {
-            String fileName = keyboard.nextLine(); //user has to specify the name of the file
+            String fileName = keyboard.nextLine();
             try
             {
                 File inputFile = new File("Data/" + fileName);
@@ -41,16 +41,16 @@ public class MainApp
 
         if (file.hasNextLine())
             file.nextLine();
-        while (file.hasNextLine()) //goes through the whole file
+        while (file.hasNextLine())
         {
             String line = file.nextLine();
-            String[] tokens = line.split(", "); //splits the whole lane into correct fields
-            //creates a new activity from the data in the file
+            String[] tokens = line.split(", ");
+
             Activity newActivity = new Activity(tokens[0], tokens[1], Double.parseDouble(tokens[2]), Double.parseDouble(tokens[3]), Integer.parseInt(tokens[4]));
-            list.add(newActivity); //adds it to the list
+            list.add(newActivity);
         }
         int input = 0, num;
-        while(input == 0)//works until the user enters the correct number to quit
+        while(input == 0)
         {
             System.out.println();
             System.out.println("Main Menu:");
@@ -64,11 +64,11 @@ public class MainApp
             input = keyboard.nextInt();
             System.out.println();
 
-            while (input > 0) //works until the input if bigger than 0
+            while (input > 0)
             {
-                switch (input)//what happens is specified by the input
+                switch (input)
                 {
-                    case 1 -> //when input is 1
+                    case 1 ->
                     {
                         System.out.println("Sorting Menu:");
                         System.out.println("1 - sort by calories burned (descending)");
@@ -80,18 +80,17 @@ public class MainApp
                         System.out.println();
                         System.out.print("Enter a number: ");
                         num = keyboard.nextInt();
-                        switch (num) //depends on what the user entered above
+                        switch (num)
                         {
-                            //prints sorted lists based on various specifications
                             case 1 -> PrintList(sortByCalories(list));
                             case 2 -> PrintList(sortByDate(list));
                             case 3 -> PrintList(sortByDuration(list));
                             case 4 -> PrintList(sortByType(list));
                             case 5 -> PrintList(sortByDistance(list));
-                            case 6 -> input = 0; //goes back to the main menu
+                            case 6 -> input = 0;
                         }
                     }
-                    case 2 -> //when input is 2
+                    case 2 ->
                     {
                         System.out.println("View Menu:");
                         System.out.println("1 - view by activity type");
@@ -102,9 +101,8 @@ public class MainApp
                         System.out.println();
                         System.out.print("Enter a number: ");
                         num = keyboard.nextInt();
-                        switch (num) //depends on what the user entered above
+                        switch (num)
                         {
-                            //prints the subset of data based on the chosen category
                             case 1 -> PrintByType(list);
                             case 2 -> PrintAboveMinimumDistance(list);
                             case 3 -> PrintByEnergyType(list);
@@ -114,25 +112,29 @@ public class MainApp
                     }
                     case 3 ->
                     {
-                        //allows the user to search for an activity or activities based on different fields
                         System.out.println("Find By:");
                         FindBy(list);
-                        input = 0; //goes back to the main menu after displaying the activity / list of activities
+                        input = 0;
                     }
                     case 4 ->
-                    {   //allows the user to view the statistics based on the type of the activity
+                    {
                         System.out.println("View statistics:");
                         printStatistics(list);
-                        input = 0; //goes back to the main menu
+                        input = 0;
                     }
-                    case 5 ->
-                    {
-                        input = -1; //exits the application
-                    }
+                    case 5 -> input = -1;
                 }
 
             }
         }
+        //PrintList(list);
+        //PrintList(sortByCalories(list));
+        //PrintList(sortByDuration(list));
+        //PrintList(sortByDate(list));
+        //PrintList(sortByType(list));
+        //PrintList(sortByDistance(list));
+
+
     }
 
     public static void PrintList (ArrayList<Activity> list)
