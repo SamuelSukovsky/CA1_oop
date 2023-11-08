@@ -116,6 +116,8 @@ public class MainApp
                     case 4 ->
                     {
                         System.out.println("View statistics:");
+                        printStatistics(list);
+                        input = 0;
                     }
                     case 5 ->
                     {
@@ -330,5 +332,19 @@ public class MainApp
         else
             System.out.println("Not found in list");
 
+    }
+
+    public static void printStatistics(ArrayList<Activity> list)
+    {
+        double calories = 0;
+        double distance = 0;
+        for (Activity a : list)
+        {
+            distance += a.getDistance();
+            calories += a.CalculateCalories();
+        }
+
+        System.out.printf("Average distance: %3,2f", distance / list.size());
+        System.out.printf("Average calories: %3,2f", calories / list.size());
     }
 }
