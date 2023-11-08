@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bbd689d-c3c9-465d-b4dd-8fcd600efcf7" name="Changes" comment="some more cleanup AGAIN AHHHH">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Activity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ActivityCaloriesComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ActivityCaloriesComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ActivityDateComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ActivityDateComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ActivityDistanceComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ActivityDistanceComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ActivityDurationComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ActivityDurationComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ActivityHeartRateComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ActivityHeartRateComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ActivityTypeComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ActivityTypeComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Energy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Energy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TestApp.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

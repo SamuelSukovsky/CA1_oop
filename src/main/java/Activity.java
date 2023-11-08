@@ -7,6 +7,7 @@ public class Activity
     private int heartRate;
     private Energy energy;
 
+    //default constructor
     public Activity()
     {
         this.type = "";
@@ -17,6 +18,7 @@ public class Activity
         this.energy = EnergyExpended();
     }
 
+    //full constructor
     public Activity(String type, String date, double duration, double distance,int heartRate)
     {
         this.type = type;
@@ -51,14 +53,14 @@ public class Activity
     void setHeartRate(int heartRate){this.heartRate = heartRate;}
 
     //Methods
-    public Energy EnergyExpended()
+    public Energy EnergyExpended() //calculates the energy expanded and assigns the value from the table
     {
         double duration = getDuration();
         double distance = getDistance();
         double speed = distance / duration * 60;
         String type = getType();
         Energy energy = Energy.Very_Light;
-        switch (type)
+        switch (type) //uses different values based on the type of the activity
         {
             case "Swimming":
             {
@@ -88,14 +90,14 @@ public class Activity
         return energy;
     }
 
-    public double CalculateCalories()
+    public double CalculateCalories() //calculates calories based on energy expanded and the duration of the activity
     {
         double duration = getDuration();
         String type = getType();
         Energy energy = this.energy;
         double calories;
         double intensity = 0;
-        switch (type)
+        switch (type) //depends on the type of the activity / assigns correct values from the tables
         {
             case "Swimming":
             {
@@ -131,7 +133,7 @@ public class Activity
                 }
             }
         }
-        calories = intensity * duration;
+        calories = intensity * duration; //calculates calories
         return calories;
     }
 

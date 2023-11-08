@@ -2,6 +2,7 @@ import java.util.Comparator;
 
 public class ActivityDateComparator implements Comparator<Activity>
 {
+    //compares the date of 2 activities / used in the sort method
     public int compare(Activity act1, Activity act2)
     {
         String[] date1 = act1.getDate().split("/");
