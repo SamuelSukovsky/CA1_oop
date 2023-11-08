@@ -105,7 +105,7 @@ public class MainApp
                             case 1 -> {}
                             case 2 -> {}
                             case 3 -> {}
-                            case 4 -> {}
+                            case 4 -> {PrintByDuration(list);}
                             case 5  -> {input = 0;}
                         }
                     }
@@ -200,14 +200,28 @@ public class MainApp
         }
         return list;
     }
-    public void PrintByType (ArrayList<Activity> list)
+    public static void PrintByType (ArrayList<Activity> list)
     {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("Enter the activity type: ");
+        String input = keyboard.next();
         for (Activity a : list)
         {
-            Scanner keyboard = new Scanner(System.in);
-            System.out.print("Enter the activity type: ");
-            String input = keyboard.next();
-            if(input.equalsIgnoreCase(Activity.getType()))
+            if(input.equalsIgnoreCase(a.getType()))
+            {
+                System.out.println(a.toString());
+            }
+        }
+        System.out.println("");
+    }
+    public static void PrintByDuration (ArrayList<Activity> list)
+    {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("Enter the activity type: ");
+        double input = keyboard.nextDouble();
+        for (Activity a : list)
+        {
+            if(input >= a.getDistance())
             {
                 System.out.println(a.toString());
             }

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bbd689d-c3c9-465d-b4dd-8fcd600efcf7" name="Changes" comment="added view menu">
+    <list default="true" id="6bbd689d-c3c9-465d-b4dd-8fcd600efcf7" name="Changes" comment="split activity declaration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp.java" afterDir="false" />
     </list>
@@ -116,15 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699283116297</updated>
     </task>
-    <task id="LOCAL-00006" summary="cleanup">
+    <task id="LOCAL-00006" summary="split activity declaration">
       <option name="closed" value="true" />
-      <created>1699125019496</created>
+      <created>1699437637618</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1699125019496</updated>
+      <updated>1699437637618</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,7 +152,8 @@
     <MESSAGE value="Sort by calories" />
     <MESSAGE value="added main and sorting menu" />
     <MESSAGE value="added view menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="added view menu" />
+    <MESSAGE value="split activity declaration" />
+    <option name="LAST_COMMIT_MESSAGE" value="split activity declaration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
