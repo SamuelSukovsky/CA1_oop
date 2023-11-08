@@ -112,6 +112,7 @@ public class MainApp
                     {
                         System.out.println("Find By:");
                         FindBy(list);
+                        input = 0;
                     }
                     case 4 ->
                     {
@@ -288,7 +289,15 @@ public class MainApp
             System.out.print("Specify the type: ");
             input = keyboard.next();
             key.setType(input);
-            index = Collections.binarySearch(list, key, comp);
+            String t = key.getType();
+            for (Activity a : list)
+            {
+                if(list.contains(t))
+                {
+                    if(key.getType().equals((t)))
+                        System.out.println(a.toString());
+                }
+            }
         }
         else if (input.equalsIgnoreCase("date"))
         {
@@ -326,7 +335,6 @@ public class MainApp
             key.setHeartRate(input2);
             index = Collections.binarySearch(list, key, comp);
         }
-
         if (index >= 0)
             System.out.println("Found " + list.get(index) + " at index " + index);
         else
