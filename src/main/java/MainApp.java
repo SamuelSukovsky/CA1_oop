@@ -127,23 +127,15 @@ public class MainApp
 
             }
         }
-        //PrintList(list);
-        //PrintList(sortByCalories(list));
-        //PrintList(sortByDuration(list));
-        //PrintList(sortByDate(list));
-        //PrintList(sortByType(list));
-        //PrintList(sortByDistance(list));
-
-
     }
 
     public static void PrintList (ArrayList<Activity> list)
     {
         for (Activity a : list)
         {
-            System.out.println(a.toString());
+            System.out.println(a);
         }
-        System.out.println("");
+        System.out.println();
     }
 
     public static ArrayList<Activity> sortByCalories (ArrayList<Activity> list)
@@ -211,10 +203,10 @@ public class MainApp
         {
             if(input.equalsIgnoreCase(a.getType()))
             {
-                System.out.println(a.toString());
+                System.out.println(a);
             }
         }
-        System.out.println("");
+        System.out.println();
     }
 
     public static void PrintAboveMinimumDistance (ArrayList<Activity> list)
@@ -226,18 +218,17 @@ public class MainApp
         {
             if(input < a.getDistance())
             {
-                System.out.println(a.toString());
+                System.out.println(a);
             }
         }
-        System.out.println("");
+        System.out.println();
     }
 
     public static void PrintByEnergyType (ArrayList<Activity> list)
     {
         Scanner keyboard = new Scanner(System.in);
         System.out.print("Enter the energy type: ");
-        String input = "";
-        input = keyboard.nextLine();
+        String input = keyboard.nextLine();
         Energy energy = switch (input.toLowerCase())
         {
             case "very light" -> Energy.Very_Light;
@@ -250,10 +241,10 @@ public class MainApp
         {
             if(energy == a.getEnergy())
             {
-                System.out.println(a.toString());
+                System.out.println(a);
             }
         }
-        System.out.println("");
+        System.out.println();
     }
 
     public static void PrintAboveMinimumDuration (ArrayList<Activity> list)
@@ -265,10 +256,10 @@ public class MainApp
         {
             if(input < a.getDuration())
             {
-                System.out.println(a.toString());
+                System.out.println(a);
             }
         }
-        System.out.println("");
+        System.out.println();
     }
 
     public static void FindBy (ArrayList<Activity> list)
@@ -290,7 +281,7 @@ public class MainApp
             for (Activity a : list)
             {
                 if(a.getType().equalsIgnoreCase((input)))
-                    System.out.println(a.toString());
+                    System.out.println(a);
             }
         }
         else if (input.equalsIgnoreCase("date"))
