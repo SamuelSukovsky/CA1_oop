@@ -24,7 +24,7 @@ public class Activity
         this.duration = duration;
         this.distance = distance;
         this.heartRate = heartRate;
-        EnergyExpended();
+        this.energy = EnergyExpended();
     }
 
     //Getters
@@ -33,7 +33,7 @@ public class Activity
     public double getDistance() {return this.distance;}
     public String getDate() {return  this.date;}
     public int getHeartRate() {return this.heartRate;}
-    public Energy getEnergy() {return energy;}
+    public Energy getEnergy() {return this.energy;}
 
     //Setters
     void setType(String type){this.type = type;}
@@ -92,7 +92,7 @@ public class Activity
     {
         double duration = getDuration();
         String type = getType();
-        Energy energy = getEnergy();
+        Energy energy = this.energy;
         double calories;
         double intensity = 0;
         switch (type)
