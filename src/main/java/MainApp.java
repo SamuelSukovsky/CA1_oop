@@ -69,7 +69,7 @@ public class MainApp
                     case 1 ->
                     {
                         System.out.println("Sorting Menu:");
-                        System.out.println("1 - sort by calories (descending)");
+                        System.out.println("1 - sort by calories burned (descending)");
                         System.out.println("2 - sort by date");
                         System.out.println("3 - sort by activity duration");
                         System.out.println("4 - sort by type of activity");
@@ -101,10 +101,10 @@ public class MainApp
                         num = keyboard.nextInt();
                         switch (num)
                         {
-                            case 1 -> {PrintList(sortByCalories(list));}
-                            case 2 -> {PrintList(sortByDate(list));}
-                            case 3 -> {PrintList(sortByDuration(list));}
-                            case 4 -> {PrintList(sortByType(list));}
+                            case 1 -> {}
+                            case 2 -> {}
+                            case 3 -> {}
+                            case 4 -> {}
                             case 5  -> {input = 0;}
                         }
                     }
@@ -198,5 +198,19 @@ public class MainApp
             Collections.reverse(list);
         }
         return list;
+    }
+    public void PrintByType (ArrayList<Activity> list)
+    {
+        for (Activity a : list)
+        {
+            Scanner keyboard = new Scanner(System.in);
+            System.out.print("Enter the activity type: ");
+            String input = keyboard.next();
+            if(input.equalsIgnoreCase(Activity.getType()))
+            {
+                System.out.println(a.toString());
+            }
+        }
+        System.out.println("");
     }
 }
