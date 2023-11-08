@@ -102,7 +102,7 @@ public class MainApp
                         num = keyboard.nextInt();
                         switch (num)
                         {
-                            case 1 -> {}
+                            case 1 -> {PrintByType(list);}
                             case 2 -> {}
                             case 3 -> {}
                             case 4 -> {}
@@ -200,14 +200,14 @@ public class MainApp
         }
         return list;
     }
-    public void PrintByType (ArrayList<Activity> list)
+    public static void PrintByType (ArrayList<Activity> list)
     {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("Enter the activity type: ");
+        String input = keyboard.next();
         for (Activity a : list)
         {
-            Scanner keyboard = new Scanner(System.in);
-            System.out.print("Enter the activity type: ");
-            String input = keyboard.next();
-            if(input.equalsIgnoreCase(Activity.getType()))
+            if(input.equalsIgnoreCase(a.getType()))
             {
                 System.out.println(a.toString());
             }
