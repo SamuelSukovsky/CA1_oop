@@ -292,11 +292,9 @@ public class MainApp
             String t = key.getType();
             for (Activity a : list)
             {
-                if(list.contains(t))
-                {
-                    if(key.getType().equals((t)))
-                        System.out.println(a.toString());
-                }
+                if(a.getType().equals((t)))
+                    System.out.println(a.toString());
+
             }
         }
         else if (input.equalsIgnoreCase("date"))
@@ -307,6 +305,10 @@ public class MainApp
             input = keyboard.next();
             key.setDate(input);
             index = Collections.binarySearch(list, key, comp);
+            if (index >= 0)
+                System.out.println("Found " + list.get(index) + " at index " + index);
+            else
+                System.out.println("Not found in list");
         }
         else if (input.equalsIgnoreCase("duration"))
         {
@@ -316,6 +318,10 @@ public class MainApp
             input1 = keyboard.nextDouble();
             key.setDuration(input1);
             index = Collections.binarySearch(list, key, comp);
+            if (index >= 0)
+                System.out.println("Found " + list.get(index) + " at index " + index);
+            else
+                System.out.println("Not found in list");
         }
         else if (input.equalsIgnoreCase("distance"))
         {
@@ -325,6 +331,10 @@ public class MainApp
             input1 = keyboard.nextDouble();
             key.setDistance(input1);
             index = Collections.binarySearch(list, key, comp);
+            if (index >= 0)
+                System.out.println("Found " + list.get(index) + " at index " + index);
+            else
+                System.out.println("Not found in list");
         }
         else if (input.equalsIgnoreCase("heart rate"))
         {
@@ -334,11 +344,11 @@ public class MainApp
             input2 = keyboard.nextInt();
             key.setHeartRate(input2);
             index = Collections.binarySearch(list, key, comp);
+            if (index >= 0)
+                System.out.println("Found " + list.get(index) + " at index " + index);
+            else
+                System.out.println("Not found in list");
         }
-        if (index >= 0)
-            System.out.println("Found " + list.get(index) + " at index " + index);
-        else
-            System.out.println("Not found in list");
 
     }
 
