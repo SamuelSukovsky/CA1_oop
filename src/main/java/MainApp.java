@@ -337,13 +337,24 @@ public class MainApp
     public static void printStatistics(ArrayList<Activity> list)
     {
         double calories = 0;
-        double distance = 0;
+        double distanceSwimming = 0;
+        int swim = 0;
+        double distanceRunning = 0;
+        int run = 0;
+        double distanceCycling = 0;
+        int cycle = 0;
         for (Activity a : list)
         {
-            distance += a.getDistance();
+            switch (a.getType())
+            {
+                case "Swimming" -> {distanceSwimming += a.getDistance(); swim++;}
+                case "Running" -> {distanceRunning += a.getDistance(); run++;}
+                case "Cycling" -> {distanceCycling += a.getDistance(); cycle++;}
+            }
+
             calories += a.CalculateCalories();
         }
 
-        System.out.printf("Average distance: %3.2f%nAverage calories: %3.2f%n", distance / list.size(), calories / list.size());
+        System.out.printf("Average Swimming distance: %3.2f%nAverage Running distance: %3.2f%nAverage Cycling distance: %3.2f%nAverage calories burned: %3.2f%n", distanceSwimming / swim, distanceRunning / run, distanceCycling / cycle, calories / list.size());
     }
 }
