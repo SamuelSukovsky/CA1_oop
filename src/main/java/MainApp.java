@@ -105,7 +105,7 @@ public class MainApp
                             case 1 -> {PrintByType(list);}
                             case 2 -> {PrintAboveMinimumDistance(list);}
                             case 3 -> {}
-                            case 4 -> {}
+                            case 4 -> {PrintAboveMinimumDuration(list);}
                             case 5  -> {input = 0;}
                         }
                     }
@@ -223,6 +223,21 @@ public class MainApp
         for (Activity a : list)
         {
             if(input < a.getDistance())
+            {
+                System.out.println(a.toString());
+            }
+        }
+        System.out.println("");
+    }
+
+    public static void PrintAboveMinimumDuration (ArrayList<Activity> list)
+    {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("Enter the minimum distance: ");
+        double input = keyboard.nextDouble();
+        for (Activity a : list)
+        {
+            if(input < a.getDuration())
             {
                 System.out.println(a.toString());
             }
