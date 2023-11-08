@@ -1,12 +1,11 @@
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Collections;
 import java.util.Scanner;
 import java.util.ArrayList;
 
 public class MainApp
 {
-    public static void main(String[] args) throws FileNotFoundException
+    public static void main(String[] args)
     {
         Scanner keyboard = new Scanner(System.in);
         ArrayList<Activity> list = new ArrayList<>();
@@ -81,12 +80,12 @@ public class MainApp
                         num = keyboard.nextInt();
                         switch (num)
                         {
-                            case 1 -> {PrintList(sortByCalories(list));}
-                            case 2 -> {PrintList(sortByDate(list));}
-                            case 3 -> {PrintList(sortByDuration(list));}
-                            case 4 -> {PrintList(sortByType(list));}
-                            case 5 -> {PrintList(sortByDistance(list));}
-                            case 6 -> {input = 0;}
+                            case 1 -> PrintList(sortByCalories(list));
+                            case 2 -> PrintList(sortByDate(list));
+                            case 3 -> PrintList(sortByDuration(list));
+                            case 4 -> PrintList(sortByType(list));
+                            case 5 -> PrintList(sortByDistance(list));
+                            case 6 -> input = 0;
                         }
                     }
                     case 2 ->
@@ -102,11 +101,11 @@ public class MainApp
                         num = keyboard.nextInt();
                         switch (num)
                         {
-                            case 1 -> {PrintByType(list);}
-                            case 2 -> {PrintAboveMinimumDistance(list);}
-                            case 3 -> {PrintByEnergyType(list);}
-                            case 4 -> {PrintAboveMinimumDuration(list);}
-                            case 5  -> {input = 0;}
+                            case 1 -> PrintByType(list);
+                            case 2 -> PrintAboveMinimumDistance(list);
+                            case 3 -> PrintByEnergyType(list);
+                            case 4 -> PrintAboveMinimumDuration(list);
+                            case 5 -> input = 0;
                         }
                     }
                     case 3 ->
