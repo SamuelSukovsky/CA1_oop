@@ -62,7 +62,7 @@ public class Activity
         {
             case "Swimming":
             {
-                if(0.5 <= speed && speed < 1.25) energy = Energy.Very_Light;
+                if(speed < 1.25) energy = Energy.Very_Light;
                 if(1.25 <= speed && speed < 2) energy = Energy.Light;
                 if(2 <= speed && speed < 2.75) energy = Energy.Moderate;
                 if(2.75 <= speed && speed < 3.5) energy = Energy.Vigorous;
@@ -74,7 +74,7 @@ public class Activity
                 if(4 <= speed && speed < 8) energy = Energy.Light;
                 if(8 <= speed && speed < 12) energy = Energy.Moderate;
                 if(12 <= speed && speed < 16) energy = Energy.Vigorous;
-                if(16 <= speed && speed < 24) energy = Energy.Very_Vigorous;
+                if(16 <= speed) energy = Energy.Very_Vigorous;
             }
             case "Cycling":
             {
@@ -82,7 +82,7 @@ public class Activity
                 if(8 <= speed && speed < 16) energy = Energy.Light;
                 if(16 <= speed && speed < 25) energy = Energy.Moderate;
                 if(25 <= speed && speed < 33) energy = Energy.Vigorous;
-                if(33 <= speed && speed < 40) energy = Energy.Very_Vigorous;
+                if(33 <= speed) energy = Energy.Very_Vigorous;
             }
         }
         return energy;

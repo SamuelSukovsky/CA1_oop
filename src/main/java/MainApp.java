@@ -61,6 +61,7 @@ public class MainApp
             System.out.println();
             System.out.print("Enter a number: ");
             input = keyboard.nextInt();
+            System.out.println();
 
             while (input > 0)
             {
@@ -238,7 +239,7 @@ public class MainApp
         Scanner keyboard = new Scanner(System.in);
         System.out.print("Enter the energy type: ");
         String input = "";
-        input = keyboard.next();
+        input = keyboard.nextLine();
         Energy energy = switch (input.toLowerCase())
         {
             case "very light" -> Energy.Very_Light;
