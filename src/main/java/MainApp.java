@@ -112,6 +112,7 @@ public class MainApp
                     case 3 ->
                     {
                         System.out.println("Find By:");
+                        FindBy(list);
                     }
                     case 4 ->
                     {
@@ -267,5 +268,68 @@ public class MainApp
             }
         }
         System.out.println("");
+    }
+
+    public static void FindBy (ArrayList<Activity> list)
+    {
+        Scanner keyboard = new Scanner(System.in);
+        Activity key = new Activity("","",0,0,0);
+        System.out.print("Enter what you want to search by: ");
+        String input = keyboard.next();
+        int input2;
+        double input1;
+        int index = 0;
+
+        if (input.equalsIgnoreCase("type"))
+        {
+            ActivityTypeComparator comp = new ActivityTypeComparator();
+            Collections.sort(list, comp);
+            System.out.print("Specify the type: ");
+            input = keyboard.next();
+            key.setType(input);
+            index = Collections.binarySearch(list, key, comp);
+        }
+        else if (input.equalsIgnoreCase("date"))
+        {
+            ActivityDateComparator comp = new ActivityDateComparator();
+            Collections.sort(list, comp);
+            System.out.print("Specify the date: ");
+            input = keyboard.next();
+            key.setDate(input);
+            index = Collections.binarySearch(list, key, comp);
+        }
+        else if (input.equalsIgnoreCase("duration"))
+        {
+            ActivityDurationComparator comp = new ActivityDurationComparator();
+            Collections.sort(list, comp);
+            System.out.print("Specify the duration: ");
+            input1 = keyboard.nextDouble();
+            key.setDuration(input1);
+            index = Collections.binarySearch(list, key, comp);
+        }
+        else if (input.equalsIgnoreCase("distance"))
+        {
+            ActivityDistanceComparator comp = new ActivityDistanceComparator();
+            Collections.sort(list, comp);
+            System.out.print("Specify the distance: ");
+            input1 = keyboard.nextDouble();
+            key.setDistance(input1);
+            index = Collections.binarySearch(list, key, comp);
+        }
+        else if (input.equalsIgnoreCase("heart rate"))
+        {
+            ActivityHeartRateComparator comp = new ActivityHeartRateComparator();
+            Collections.sort(list, comp);
+            System.out.print("Specify the heart rate: ");
+            input2 = keyboard.nextInt();
+            key.setHeartRate(input2);
+            index = Collections.binarySearch(list, key, comp);
+        }
+
+        if (index >= 0)
+            System.out.println("Found " + list.get(index) + " at index " + index);
+        else
+            System.out.println("Not found in list");
+
     }
 }
