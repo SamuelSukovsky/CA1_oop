@@ -40,12 +40,12 @@ public class Activity
     void setDuration(double duration)
     {
         this.duration = duration;
-        EnergyExpended();
+        this.energy = EnergyExpended();
     }
     void setDistance(double distance)
     {
         this.distance = distance;
-        EnergyExpended();
+        this.energy = EnergyExpended();
     }
     void setDate(String date){this.date = date;}
     void setHeartRate(int heartRate){this.heartRate = heartRate;}
