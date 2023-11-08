@@ -14,7 +14,7 @@ public class Activity
         this.duration = 0;
         this.distance = 0;
         this.heartRate = 0;
-        EnergyExpended();
+        this.energy = EnergyExpended();
     }
 
     public Activity(String type, String date, double duration, double distance,int heartRate)

@@ -1,5 +1,6 @@
 import java.io.File;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -276,31 +277,28 @@ public class MainApp
     public static void FindBy (ArrayList<Activity> list)
     {
         Scanner keyboard = new Scanner(System.in);
-        Activity key = new Activity("","",0,0,0);
+        Activity key = new Activity();
+        Comparator comp;
         System.out.print("Enter what you want to search by: ");
-        String input = keyboard.next();
-        int input2;
-        double input1;
+        String input = keyboard.nextLine();
+        double inputValue;
         int index = 0;
 
         if (input.equalsIgnoreCase("type"))
         {
-            ActivityTypeComparator comp = new ActivityTypeComparator();
+            comp = new ActivityTypeComparator();
             Collections.sort(list, comp);
             System.out.print("Specify the type: ");
             input = keyboard.next();
-            key.setType(input);
-            String t = key.getType();
             for (Activity a : list)
             {
-                if(a.getType().equals((t)))
+                if(a.getType().equalsIgnoreCase((input)))
                     System.out.println(a.toString());
-
             }
         }
         else if (input.equalsIgnoreCase("date"))
         {
-            ActivityDateComparator comp = new ActivityDateComparator();
+            comp = new ActivityDateComparator();
             Collections.sort(list, comp);
             System.out.print("Specify the date: ");
             input = keyboard.next();
@@ -313,11 +311,11 @@ public class MainApp
         }
         else if (input.equalsIgnoreCase("duration"))
         {
-            ActivityDurationComparator comp = new ActivityDurationComparator();
+            comp = new ActivityDurationComparator();
             Collections.sort(list, comp);
             System.out.print("Specify the duration: ");
-            input1 = keyboard.nextDouble();
-            key.setDuration(input1);
+            inputValue = keyboard.nextDouble();
+            key.setDuration(inputValue);
             index = Collections.binarySearch(list, key, comp);
             if (index >= 0)
                 System.out.println("Found " + list.get(index) + " at index " + index);
@@ -326,11 +324,11 @@ public class MainApp
         }
         else if (input.equalsIgnoreCase("distance"))
         {
-            ActivityDistanceComparator comp = new ActivityDistanceComparator();
+            comp = new ActivityDistanceComparator();
             Collections.sort(list, comp);
             System.out.print("Specify the distance: ");
-            input1 = keyboard.nextDouble();
-            key.setDistance(input1);
+            inputValue = keyboard.nextDouble();
+            key.setDistance(inputValue);
             index = Collections.binarySearch(list, key, comp);
             if (index >= 0)
                 System.out.println("Found " + list.get(index) + " at index " + index);
@@ -339,11 +337,11 @@ public class MainApp
         }
         else if (input.equalsIgnoreCase("heart rate"))
         {
-            ActivityHeartRateComparator comp = new ActivityHeartRateComparator();
+            comp = new ActivityHeartRateComparator();
             Collections.sort(list, comp);
             System.out.print("Specify the heart rate: ");
-            input2 = keyboard.nextInt();
-            key.setHeartRate(input2);
+            inputValue = keyboard.nextInt();
+            key.setHeartRate((int) inputValue);
             index = Collections.binarySearch(list, key, comp);
             if (index >= 0)
                 System.out.println("Found " + list.get(index) + " at index " + index);
