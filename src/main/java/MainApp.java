@@ -104,7 +104,7 @@ public class MainApp
                         {
                             case 1 -> {PrintByType(list);}
                             case 2 -> {PrintAboveMinimumDistance(list);}
-                            case 3 -> {}
+                            case 3 -> {PrintByEnergyType(list);}
                             case 4 -> {PrintAboveMinimumDuration(list);}
                             case 5  -> {input = 0;}
                         }
@@ -230,10 +230,34 @@ public class MainApp
         System.out.println("");
     }
 
+    public static void PrintByEnergyType (ArrayList<Activity> list)
+    {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("Enter the energy type: ");
+        String input = "";
+        input = keyboard.next();
+        Energy energy = switch (input.toLowerCase())
+        {
+            case "very light" -> Energy.Very_Light;
+            case "light" -> Energy.Light;
+            case "moderate" -> Energy.Moderate;
+            case "vigorous" -> Energy.Vigorous;
+            default -> Energy.Very_Vigorous;
+        };
+        for (Activity a : list)
+        {
+            if(energy == a.getEnergy())
+            {
+                System.out.println(a.toString());
+            }
+        }
+        System.out.println("");
+    }
+
     public static void PrintAboveMinimumDuration (ArrayList<Activity> list)
     {
         Scanner keyboard = new Scanner(System.in);
-        System.out.print("Enter the minimum distance: ");
+        System.out.print("Enter the minimum duration: ");
         double input = keyboard.nextDouble();
         for (Activity a : list)
         {
