@@ -1,0 +1,125 @@
+Index: src/main/java/Activity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class Activity\r\n{\r\n    private String type;\r\n    private double duration;\r\n    private String date;\r\n    private double distance;\r\n    private int heartRate;\r\n\r\n    public Activity()\r\n    {\r\n        this.type = \"\";\r\n        this.duration = 0;\r\n        this.date = \"\";\r\n        this.distance = 0;\r\n        this.heartRate = 0;\r\n    }\r\n\r\n    public Activity(String type,double duration,String date, double distance,int heartRate)\r\n    {\r\n        this.type = type;\r\n        this.duration = duration;\r\n        this.date = date;\r\n        this.distance = distance;\r\n        this.heartRate = heartRate;\r\n    }\r\n\r\n    //Getters\r\n    String getType() {return this.type;}\r\n    double getDuration() {return this.duration;}\r\n    double getDistance() {return this.distance;}\r\n    String getDate() {return  this.date;}\r\n    int getHeartRate() {return this.heartRate;}\r\n\r\n    //Setters\r\n    void setType(String type){this.type = type;}\r\n    void setDuration(double duration){this.duration = duration;}\r\n    void setDistance(double distance){this.distance = distance;}\r\n    void setDate(String date){this.date = date;}\r\n    void setHeartRate(int heartRate){this.heartRate = heartRate;}\r\n\r\n    //Methods\r\n    public double EnergyExpanded()\r\n    {\r\n        double duration = getDuration();\r\n        double distance = getDistance();\r\n        double energy = distance / duration * 60;\r\n        return energy;\r\n    }\r\n\r\n    public double CalculateCalories()\r\n    {\r\n        double duration = getDuration();\r\n        double distance = getDistance();\r\n        String type = getType();\r\n        double energy = EnergyExpanded();\r\n        double calories;\r\n        double intensity = 0;\r\n        switch (type)\r\n        {\r\n            case \"Swimming\":\r\n            {\r\n                if(0.5 <= energy && energy < 1.25) intensity = 5;\r\n                if(1.25 <= energy && energy < 2) intensity = 6.3;\r\n                if(2 <= energy && energy < 2.75) intensity = 7.6;\r\n                if(2.75 <= energy && energy < 3.5) intensity = 8.9;\r\n                if(3.5 <= energy) intensity = 10.2;\r\n            }\r\n            case \"Running\":\r\n            {\r\n                if(energy < 4) intensity = 4.1;\r\n                if(4 <= energy && energy < 8) intensity = 7.2;\r\n                if(8 <= energy && energy < 12) intensity = 10;\r\n                if(12 <= energy && energy < 16) intensity = 15.4;\r\n                if(16 <= energy && energy < 24) intensity = 20.8;\r\n            }\r\n            case \"Cycling\":\r\n            {\r\n                if(energy < 8) intensity = 2;\r\n                if(8 <= energy && energy < 16) intensity = 5;\r\n                if(16 <= energy && energy < 25) intensity = 7;\r\n                if(25 <= energy && energy < 33) intensity = 13;\r\n                if(33 <= energy && energy < 40) intensity = 15;\r\n            }\r\n        }\r\n        calories = intensity * duration;\r\n        return calories;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/Activity.java b/src/main/java/Activity.java
+--- a/src/main/java/Activity.java	(revision 8a67efb625ee81af27d6b3c233845c6766cc3e28)
++++ b/src/main/java/Activity.java	(date 1699124085988)
+@@ -1,25 +1,25 @@
+ public class Activity
+ {
+     private String type;
+-    private double duration;
+     private String date;
++    private double duration;
+     private double distance;
+     private int heartRate;
+ 
+     public Activity()
+     {
+         this.type = "";
+-        this.duration = 0;
+         this.date = "";
++        this.duration = 0;
+         this.distance = 0;
+         this.heartRate = 0;
+     }
+ 
+-    public Activity(String type,double duration,String date, double distance,int heartRate)
++    public Activity(String type, String date, double duration, double distance,int heartRate)
+     {
+         this.type = type;
++        this.date = date;
+         this.duration = duration;
+-        this.date = date;
+         this.distance = distance;
+         this.heartRate = heartRate;
+     }
+Index: src/main/java/TestApp.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/TestApp.java b/src/main/java/TestApp.java
+new file mode 100644
+--- /dev/null	(date 1699124219496)
++++ b/src/main/java/TestApp.java	(date 1699124219496)
+@@ -0,0 +1,13 @@
++import java.io.FileNotFoundException;
++
++public class TestApp
++{
++    public static void main(String[] args)
++    {
++        Activity act1 = new Activity("Swimming", "05/01/2020",92, 4.01, 145);
++        Activity act2 = new Activity("Swimming", "06/01/2020",57, 1.63, 104);
++        Activity act3 = new Activity("Swimming", "07/01/2020",120, 7.37, 148);
++
++
++    }
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"6bbd689d-c3c9-465d-b4dd-8fcd600efcf7\" name=\"Changes\" comment=\"added calories comparator\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/ActivityDateComparator.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/ActivityDistanceComparator.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/ActivityDurationComparator.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/ActivityTypeComparator.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2XimAoXGbABfC2YE3X1J8phSCxi\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"git-widget-placeholder\": \"master\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"6bbd689d-c3c9-465d-b4dd-8fcd600efcf7\" name=\"Changes\" comment=\"\" />\r\n      <created>1699117474272</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1699117474272</updated>\r\n      <workItem from=\"1699117475340\" duration=\"2000\" />\r\n      <workItem from=\"1699120138295\" duration=\"30000\" />\r\n      <workItem from=\"1699120169016\" duration=\"2409000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"added activity class\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699120023310</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699120023310</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"added calories comparator\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699121982572</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699121982572</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"added activity class\" />\r\n    <MESSAGE value=\"added calories comparator\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"added calories comparator\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>\r\n          <line>15</line>\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 8a67efb625ee81af27d6b3c233845c6766cc3e28)
++++ b/.idea/workspace.xml	(date 1699124170202)
+@@ -4,12 +4,10 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="6bbd689d-c3c9-465d-b4dd-8fcd600efcf7" name="Changes" comment="added calories comparator">
+-      <change afterPath="$PROJECT_DIR$/src/main/java/ActivityDateComparator.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/ActivityDistanceComparator.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/ActivityDurationComparator.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/ActivityTypeComparator.java" afterDir="false" />
++    <list default="true" id="6bbd689d-c3c9-465d-b4dd-8fcd600efcf7" name="Changes" comment="added the rest of comparators">
++      <change afterPath="$PROJECT_DIR$/src/main/java/TestApp.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Activity.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -62,7 +60,7 @@
+       <updated>1699117474272</updated>
+       <workItem from="1699117475340" duration="2000" />
+       <workItem from="1699120138295" duration="30000" />
+-      <workItem from="1699120169016" duration="2409000" />
++      <workItem from="1699120169016" duration="3623000" />
+     </task>
+     <task id="LOCAL-00001" summary="added activity class">
+       <option name="closed" value="true" />
+@@ -80,7 +78,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1699121982572</updated>
+     </task>
+-    <option name="localTasksCounter" value="3" />
++    <task id="LOCAL-00003" summary="added the rest of comparators">
++      <option name="closed" value="true" />
++      <created>1699122609721</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1699122609721</updated>
++    </task>
++    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -100,7 +106,8 @@
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="added activity class" />
+     <MESSAGE value="added calories comparator" />
+-    <option name="LAST_COMMIT_MESSAGE" value="added calories comparator" />
++    <MESSAGE value="added the rest of comparators" />
++    <option name="LAST_COMMIT_MESSAGE" value="added the rest of comparators" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
