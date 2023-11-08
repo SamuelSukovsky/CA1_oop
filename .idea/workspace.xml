@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bbd689d-c3c9-465d-b4dd-8fcd600efcf7" name="Changes" comment="finished the base of the menu">
+    <list default="true" id="6bbd689d-c3c9-465d-b4dd-8fcd600efcf7" name="Changes" comment="added view menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp.java" afterDir="false" />
     </list>
@@ -74,8 +74,7 @@
       <workItem from="1699117475340" duration="2000" />
       <workItem from="1699120138295" duration="30000" />
       <workItem from="1699120169016" duration="2409000" />
-      <workItem from="1699280081490" duration="3464000" />
-      <workItem from="1699435169345" duration="1654000" />
+      <workItem from="1699280081490" duration="3311000" />
     </task>
     <task id="LOCAL-00001" summary="added activity class">
       <option name="closed" value="true" />
@@ -117,15 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699283116297</updated>
     </task>
-    <task id="LOCAL-00006" summary="finished the base of the menu">
+    <task id="LOCAL-00006" summary="cleanup">
       <option name="closed" value="true" />
-      <created>1699283554955</created>
+      <created>1699125019496</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1699283554955</updated>
+      <updated>1699125019496</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,8 +152,7 @@
     <MESSAGE value="Sort by calories" />
     <MESSAGE value="added main and sorting menu" />
     <MESSAGE value="added view menu" />
-    <MESSAGE value="finished the base of the menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished the base of the menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="added view menu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
