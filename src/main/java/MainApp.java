@@ -344,7 +344,6 @@ public class MainApp
             calories += a.CalculateCalories();
         }
 
-        System.out.printf("Average distance: %3,2f", distance / list.size());
-        System.out.printf("Average calories: %3,2f", calories / list.size());
+        System.out.printf("Average distance: %3.2f%nAverage calories: %3.2f%n", distance / list.size(), calories / list.size());
     }
 }
