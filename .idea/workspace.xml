@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bbd689d-c3c9-465d-b4dd-8fcd600efcf7" name="Changes" comment="fixed find by">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6bbd689d-c3c9-465d-b4dd-8fcd600efcf7" name="Changes" comment="some more cleanup AGAIN AHHHH">
       <change beforePath="$PROJECT_DIR$/src/main/java/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +21,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -172,7 +172,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699444978412</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="some more cleanup">
+      <option name="closed" value="true" />
+      <created>1699447506224</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1699447506224</updated>
+    </task>
+    <task id="LOCAL-00014" summary="some more cleanup AGAIN AHHHH">
+      <option name="closed" value="true" />
+      <created>1699447670793</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1699447670793</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,7 +223,9 @@
     <MESSAGE value="Statistics" />
     <MESSAGE value="find by method fix" />
     <MESSAGE value="fixed find by" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed find by" />
+    <MESSAGE value="some more cleanup" />
+    <MESSAGE value="some more cleanup AGAIN AHHHH" />
+    <option name="LAST_COMMIT_MESSAGE" value="some more cleanup AGAIN AHHHH" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
